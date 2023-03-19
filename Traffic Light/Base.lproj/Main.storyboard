@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,35 +18,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KvJ-L3-qN3">
-                                <rect key="frame" x="145" y="295" width="125" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KvJ-L3-qN3">
+                                <rect key="frame" x="145" y="295" width="125" height="127"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="isy-5I-CWJ"/>
+                                    <constraint firstAttribute="height" constant="127" id="yTz-jH-8uu"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEu-bm-Lec">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEu-bm-Lec">
                                 <rect key="frame" x="137" y="731" width="141" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="START">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
-                                </buttonConfiguration>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="141" id="EvF-Jb-jci"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
                                 <connections>
                                     <action selector="colourSwapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xa2-sc-BNV"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MQE-sR-9Rq">
-                                <rect key="frame" x="145" y="95" width="125" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQE-sR-9Rq">
+                                <rect key="frame" x="145" y="95" width="125" height="127"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="0XI-Cd-Xsp"/>
+                                    <constraint firstAttribute="width" constant="125" id="nql-oV-Ivr"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4k5-mw-8EU">
-                                <rect key="frame" x="145" y="495" width="125" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4k5-mw-8EU">
+                                <rect key="frame" x="145" y="495" width="125" height="127"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="brf-s5-tEk"/>
+                                    <constraint firstAttribute="width" constant="125" id="lSH-Kz-z45"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="WEu-bm-Lec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HME-vs-Uag"/>
+                            <constraint firstItem="KvJ-L3-qN3" firstAttribute="top" secondItem="MQE-sR-9Rq" secondAttribute="bottom" constant="73" id="MgH-EL-RB9"/>
+                            <constraint firstItem="WEu-bm-Lec" firstAttribute="top" secondItem="4k5-mw-8EU" secondAttribute="bottom" constant="109" id="Q32-k6-yM8"/>
+                            <constraint firstItem="MQE-sR-9Rq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="anX-V2-ih1"/>
+                            <constraint firstItem="4k5-mw-8EU" firstAttribute="top" secondItem="KvJ-L3-qN3" secondAttribute="bottom" constant="73" id="auV-RW-XxR"/>
+                            <constraint firstItem="MQE-sR-9Rq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mbu-Xy-Pdb"/>
+                            <constraint firstItem="4k5-mw-8EU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="me1-9C-nL4"/>
+                            <constraint firstItem="KvJ-L3-qN3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgm-Zg-Lt9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WEu-bm-Lec" secondAttribute="bottom" constant="69" id="vz5-TO-Z1X"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenColour" destination="4k5-mw-8EU" id="8Vh-ik-LGm"/>
@@ -59,6 +85,12 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

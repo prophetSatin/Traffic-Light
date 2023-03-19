@@ -19,13 +19,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redColour.layer.cornerRadius = 60
+        //toggleButton.layer.cornerRadius = 30
+        
+        redColour.layer.cornerRadius = redColour.frame.width / 2
         redColour.alpha = 0.3
         
-        yellowColour.layer.cornerRadius = 60
+        yellowColour.layer.cornerRadius = yellowColour.frame.width / 2
         yellowColour.alpha = 0.3
         
-        greenColour.layer.cornerRadius = 60
+        greenColour.layer.cornerRadius = greenColour.frame.width / 2
         greenColour.alpha = 0.3
         
     }
