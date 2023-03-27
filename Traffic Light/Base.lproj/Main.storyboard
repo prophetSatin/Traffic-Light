@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,19 +17,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KvJ-L3-qN3">
-                                <rect key="frame" x="145" y="295" width="125" height="127"/>
+                            <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MQE-sR-9Rq">
+                                <rect key="frame" x="140" y="94" width="134" height="134"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MQE-sR-9Rq" secondAttribute="height" multiplier="1:1" id="brp-bl-nf1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KvJ-L3-qN3">
+                                <rect key="frame" x="140" y="273" width="134" height="134.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="isy-5I-CWJ"/>
-                                    <constraint firstAttribute="height" constant="127" id="yTz-jH-8uu"/>
+                                    <constraint firstAttribute="width" secondItem="KvJ-L3-qN3" secondAttribute="height" multiplier="1:1" id="3TF-fP-new"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4k5-mw-8EU">
+                                <rect key="frame" x="140" y="452.33333333333326" width="134" height="134"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4k5-mw-8EU" secondAttribute="height" multiplier="1:1" id="Pxq-dE-dlc"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEu-bm-Lec">
-                                <rect key="frame" x="137" y="731" width="141" height="62"/>
+                                <rect key="frame" x="113" y="717.33333333333337" width="188" height="75.666666666666629"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="141" id="EvF-Jb-jci"/>
+                                    <constraint firstAttribute="width" secondItem="WEu-bm-Lec" secondAttribute="height" multiplier="119:48" id="Edj-N6-yWL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -41,35 +53,22 @@
                                     <action selector="colourSwapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xa2-sc-BNV"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQE-sR-9Rq">
-                                <rect key="frame" x="145" y="95" width="125" height="127"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="0XI-Cd-Xsp"/>
-                                    <constraint firstAttribute="width" constant="125" id="nql-oV-Ivr"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4k5-mw-8EU">
-                                <rect key="frame" x="145" y="495" width="125" height="127"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="brf-s5-tEk"/>
-                                    <constraint firstAttribute="width" constant="125" id="lSH-Kz-z45"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
-                            <constraint firstItem="WEu-bm-Lec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HME-vs-Uag"/>
-                            <constraint firstItem="KvJ-L3-qN3" firstAttribute="top" secondItem="MQE-sR-9Rq" secondAttribute="bottom" constant="73" id="MgH-EL-RB9"/>
-                            <constraint firstItem="WEu-bm-Lec" firstAttribute="top" secondItem="4k5-mw-8EU" secondAttribute="bottom" constant="109" id="Q32-k6-yM8"/>
-                            <constraint firstItem="MQE-sR-9Rq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="anX-V2-ih1"/>
-                            <constraint firstItem="4k5-mw-8EU" firstAttribute="top" secondItem="KvJ-L3-qN3" secondAttribute="bottom" constant="73" id="auV-RW-XxR"/>
-                            <constraint firstItem="MQE-sR-9Rq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mbu-Xy-Pdb"/>
-                            <constraint firstItem="4k5-mw-8EU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="me1-9C-nL4"/>
-                            <constraint firstItem="KvJ-L3-qN3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgm-Zg-Lt9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WEu-bm-Lec" secondAttribute="bottom" constant="69" id="vz5-TO-Z1X"/>
+                            <constraint firstItem="KvJ-L3-qN3" firstAttribute="top" secondItem="MQE-sR-9Rq" secondAttribute="bottom" constant="45" id="Afg-zm-Zk1"/>
+                            <constraint firstItem="MQE-sR-9Rq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ea2-nd-wBu"/>
+                            <constraint firstItem="WEu-bm-Lec" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="119:568" id="O1U-p6-BfV"/>
+                            <constraint firstItem="MQE-sR-9Rq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="85:568" id="Seq-QW-uaY"/>
+                            <constraint firstItem="4k5-mw-8EU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="85:568" id="UPs-4y-ixQ"/>
+                            <constraint firstItem="KvJ-L3-qN3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zof-P8-kyk"/>
+                            <constraint firstItem="4k5-mw-8EU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gcZ-Cs-0HI"/>
+                            <constraint firstItem="4k5-mw-8EU" firstAttribute="top" secondItem="KvJ-L3-qN3" secondAttribute="bottom" constant="45" id="mAa-Mq-5C1"/>
+                            <constraint firstItem="KvJ-L3-qN3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="85:568" id="qSK-bN-6jz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WEu-bm-Lec" secondAttribute="bottom" constant="69" id="wwa-gd-Euw"/>
+                            <constraint firstItem="MQE-sR-9Rq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ywY-e7-h2a"/>
+                            <constraint firstItem="WEu-bm-Lec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zx0-gu-9pg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -81,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.681159420289859" y="-27.455357142857142"/>
+            <point key="canvasLocation" x="37.5" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>

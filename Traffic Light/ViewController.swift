@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //toggleButton.layer.cornerRadius = 30
+        toggleButton.layer.cornerRadius = toggleButton.frame.width / 5
         
         redColour.layer.cornerRadius = redColour.frame.width / 2
         redColour.alpha = 0.3
@@ -35,15 +35,18 @@ class ViewController: UIViewController {
     @IBAction func colourSwapAction(_ sender: Any) {
         switch indicator {
         case 1:
-            toggleButton.setTitle("Next", for: .normal)
+            toggleButton.setTitle("Red", for: .normal)
             greenColour.alpha = 0.3
             redColour.alpha = 1
             indicator += 1
         case 2:
+            toggleButton.setTitle("Yellow", for: .normal)
             redColour.alpha = 0.3
             yellowColour.alpha = 1
             indicator += 1
-        case 3: greenColour.alpha = 1
+        case 3:
+            toggleButton.setTitle("Green", for: .normal)
+            greenColour.alpha = 1
             yellowColour.alpha = 0.3
             greenColour.alpha = 1
             indicator = 1
